@@ -1,0 +1,17 @@
+{
+  "common": {
+    "driverType": "chrome",
+    "driverVersion": "latest",
+    "isRemote": false,
+    "remoteConnectionUrl": "http://localhost:4444/wd/hub",
+    "urlLoginPage": "https://github.com/",
+    "downloadDirectory": "target/downloads/"
+  },
+
+  "timeouts": {
+    "timeoutImplicit": 6000,
+    "pollingInterval": 200,
+    "timeoutPageLoad": 20000,
+    "timeoutCommand": 15000
+  }
+}
