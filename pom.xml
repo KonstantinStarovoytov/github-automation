@@ -115,6 +115,11 @@
                 <version>${maven-surefire-plugin.version}</version>
 
                 <configuration>
+                    <parallel>all</parallel>
+                    <threadCount>3</threadCount>
+                    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+                    <testClassesDirectory>${project.build.directory}/test-classes</testClassesDirectory>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
