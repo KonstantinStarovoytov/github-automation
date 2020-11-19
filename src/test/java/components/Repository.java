@@ -21,6 +21,4 @@ public class Repository extends MultipleBaseComponent{
     public Repository(SelenideElement self) {
         super(self);
     }
-
-
 }

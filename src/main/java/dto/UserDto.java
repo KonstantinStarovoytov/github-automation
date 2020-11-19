@@ -7,7 +7,7 @@ import lombok.extern.jackson.Jacksonized;
 import java.util.List;
 
 @Jacksonized
-@Builder
+@Builder(toBuilder = true)
 @Value
 public class UserDto {
 

@@ -4,7 +4,7 @@
     "driverVersion": "latest",
     "isRemote": false,
     "remoteConnectionUrl": "http://localhost:4444/wd/hub",
-    "urlLoginPage": "https://github.com/",
+    "baseUrl": "https://github.com/",
     "downloadDirectory": "target/downloads/"
   },
 

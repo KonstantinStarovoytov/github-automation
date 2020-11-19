@@ -1,7 +1,5 @@
 {
   "name": "First Name",
-  "login": "example@email.com",
-  "password": "password example",
   "repositories": [
     {
       "name": "github-automation",

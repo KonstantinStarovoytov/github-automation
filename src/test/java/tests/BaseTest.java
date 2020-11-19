@@ -15,13 +15,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pages.LoginPage;
 
-import static com.codeborne.selenide.Browsers.CHROME;
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.FileDownloadMode.FOLDER;
 import static com.codeborne.selenide.SelectorMode.Sizzle;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static core.TestConfiguration.*;
 import static java.util.Optional.ofNullable;
 import static org.openqa.selenium.UnexpectedAlertBehaviour.ACCEPT;
 import static org.openqa.selenium.remote.CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR;
@@ -34,16 +34,21 @@ public abstract class BaseTest {
 
     @BeforeAll
     public static void setupGlobalConfiguration() {
-        baseUrl = "https://github.com/";
-        timeout = 6000;
-        pollingInterval = 200;
-        pageLoadTimeout = 15000;
-        browser = CHROME;
+        baseUrl = BASE_URL;
+        timeout = IMPLICIT_TIMEOUT;
+        pollingInterval = POLLING_INTERVAL;
+        pageLoadTimeout = PAGE_LOAD_TIMEOUT;
+        if (IS_REMOTE) {
+            remote = REMOTE_CONNECTION_URL;
+            browserCapabilities.setCapability("enableVNC", true);
+
+        }
+        browser = DRIVER_TYPE;
         startMaximized = true;
         selectorMode = Sizzle;
         savePageSource = false;
         fileDownload = FOLDER;
-        downloadsFolder = "target/downloads/";
+        downloadsFolder = DOWNLOAD_DIRECTORY;
         browserCapabilities.setCapability(UNEXPECTED_ALERT_BEHAVIOUR, ACCEPT);
     }
 
