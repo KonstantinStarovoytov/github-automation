@@ -42,7 +42,7 @@ public class ResourceReader {
         String key = jsonPath.replace("/", ".").substring(1);
         final Optional<String> property = ofNullable(System.getProperty(key));
         property.ifPresent(value -> log
-                .info(String.format("Using variable passed from environment %s=%s", key, value)));
+                .info(String.format("***** Using variable passed from environment %s=%s", key, value)));
 
         if (context.at(jsonPath).isBoolean()) {
             return (Type) property.map(Boolean::parseBoolean).orElseGet(context.at(jsonPath)::asBoolean);
