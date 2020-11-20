@@ -41,6 +41,8 @@ public abstract class BaseTest {
         if (IS_REMOTE) {
             remote = REMOTE_CONNECTION_URL;
             browserCapabilities.setCapability("enableVNC", true);
+            headless = true;
+            System.setProperty("chromeoptions.args", "--disable-gpu,--no-sandbox");
         }
         browser = DRIVER_TYPE;
         startMaximized = true;
@@ -55,7 +57,7 @@ public abstract class BaseTest {
     @BeforeEach
     public void driverInitialization(TestInfo testInfo) {
         open(baseUrl);
-        getWebDriver().manage().addCookie(new Cookie("_device_id", "be383b8ef24b09a980805ef04830b61d" ));
+        getWebDriver().manage().addCookie(new Cookie("_device_id", "be383b8ef24b09a980805ef04830b61d"));
         if (!testInfo.getTestMethod().orElseThrow().isAnnotationPresent(WithoutLogin.class)) {
             doLogin();
         }
