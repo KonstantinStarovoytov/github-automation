@@ -1,6 +1,6 @@
 {
   "chrome": {
-    "default": "latest",
+    "default": "87",
     "versions": {
       "latest": {
         "env": [
@@ -9,7 +9,7 @@
           "LC_ALL=ru_RU.UTF-8",
           "TZ=Europe/Minsk"
         ],
-        "image": "selenoid/chrome:latest",
+        "image": "selenoid/chrome:87.0",
         "tmpfs": {
           "/tmp": "size=512m"
         },

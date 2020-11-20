@@ -40,6 +40,7 @@ public class ResourceReader {
 
     public  <Type extends Serializable & Comparable<Type>> Type getProperty(@NonNull JsonNode context, @NonNull String jsonPath) {
         String key = jsonPath.replace("/", ".").substring(1);
+        log.error(key + "  -   " +System.getProperty(key));
         final Optional<String> property = ofNullable(System.getProperty(key));
         property.ifPresent(value -> log
                 .info(String.format("***** Using variable passed from environment %s=%s", key, value)));

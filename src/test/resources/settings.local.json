@@ -2,7 +2,7 @@
   "common": {
     "driverType": "chrome",
     "driverVersion": "latest",
-    "isRemote": false,
+    "isRemote": true,
     "remoteConnectionUrl": "http://localhost:4444/wd/hub",
     "baseUrl": "https://github.com/",
     "downloadDirectory": "target/downloads/"
