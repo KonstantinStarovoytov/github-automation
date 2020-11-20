@@ -29,6 +29,11 @@ public interface ParametrizedSelenideElement {
      * @return ParametrizedSelenideElement
      */
 
+    static SelenideElement clickOn(SelenideElement element) {
+        element.click();
+        return element;
+    }
+
     static ParametrizedSelenideElement $p(String cssSelector) {
         return parameter -> $(format(cssSelector, parameter));
     }

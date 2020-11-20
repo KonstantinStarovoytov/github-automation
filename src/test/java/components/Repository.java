@@ -1,10 +1,12 @@
 package components;
 
 import com.codeborne.selenide.SelenideElement;
+import core.ParametrizedSelenideElement;
 import core.annotations.PageComponent;
 import core.annotations.RootLocator;
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.experimental.ExtensionMethod;
 import lombok.experimental.FieldDefaults;
 
 @PageComponent

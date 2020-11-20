@@ -1,15 +1,15 @@
 {
   "chrome": {
-    "default": "latest",
+    "default": "85",
     "versions": {
-      "latest": {
+      "85": {
         "env": [
           "LANG=ru_RU.UTF-8",
           "LANGUAGE=ru:en",
           "LC_ALL=ru_RU.UTF-8",
           "TZ=Europe/Minsk"
         ],
-        "image": "selenoid/chrome:87.0",
+        "image": "selenoid/chrome:85.0",
         "tmpfs": {
           "/tmp": "size=512m"
         },
