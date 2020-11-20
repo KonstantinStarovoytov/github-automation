@@ -41,7 +41,6 @@ public abstract class BaseTest {
         if (IS_REMOTE) {
             remote = REMOTE_CONNECTION_URL;
             browserCapabilities.setCapability("enableVNC", true);
-
         }
         browser = DRIVER_TYPE;
         startMaximized = true;

@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class MultipleBaseComponent {
+public abstract class MultipleBaseComponent {
 
     private final SelenideElement self;
 

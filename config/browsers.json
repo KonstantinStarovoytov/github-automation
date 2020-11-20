@@ -1,6 +1,6 @@
 {
   "chrome": {
-    "default": "87",
+    "default": "latest",
     "versions": {
       "latest": {
         "env": [
