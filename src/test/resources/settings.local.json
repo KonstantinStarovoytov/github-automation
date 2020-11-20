@@ -3,7 +3,7 @@
     "driverType": "chrome",
     "driverVersion": "latest",
     "isRemote": true,
-    "remoteConnectionUrl": "http://127.0.0.1:4444/wd/hub",
+    "remoteConnectionUrl": "http:/172.17.0.4:4444/wd/hub",
     "baseUrl": "https://github.com/",
     "downloadDirectory": "target/downloads/"
   },
